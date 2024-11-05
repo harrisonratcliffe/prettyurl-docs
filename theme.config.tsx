@@ -3,7 +3,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: (
     <>
-  <img width="30px" src="https://prettyurl.net/logo.png" alt="Logo" />
+  <img width="30px" src="https://prettyurl.net/logo.webp" alt="Logo" />
 
       <span style={{ marginLeft: '.4em', fontWeight: 800 }}>
         Pretty URL Documentation
