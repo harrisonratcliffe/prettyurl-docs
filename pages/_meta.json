@@ -1,0 +1,21 @@
+{
+  "index": "Introduction",
+  "getting-started": "Getting Started",
+  "billing": "Billing",
+  "changelog": {
+    "title": "Changelog",
+    "type": "page"
+  },
+  "website": {
+    "title": "Website ↗",
+    "type": "page",
+    "href": "https://prettyurl.net",
+    "newWindow": true
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://prettyurl.net/contact",
+    "newWindow": true
+  }
+}

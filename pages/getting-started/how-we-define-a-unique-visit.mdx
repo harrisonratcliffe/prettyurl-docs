@@ -1,0 +1,54 @@
+# How we define a unique visit
+
+## What is a Unique Visit?
+
+A unique visit represents a distinct person viewing your website. We use two main factors to determine if a visit is unique:
+
+1. If they've never visited before
+2. If they're returning after being away for at least 30 minutes
+
+## How We Track Visitors
+
+### First-Time Visit
+When someone visits your site for the first time, we:
+- Automatically count that visit as unique
+- Create a small tracking cookie that stays on their device for 30 days
+- Use this cookie to recognize them on future visits
+
+### Returning Visitors
+When someone returns to your site:
+- If it's been less than 30 minutes since their last visit, they aren't counted as a unique visitor
+- If it's been more than 30 minutes, they are counted as a unique visitor again
+- This helps ensure that someone refreshing your page or browsing multiple pages isn't counted multiple times
+
+## Important Notes
+
+- The 30-day cookie means that after 30 days, returning visitors will be counted as new again
+- If someone clears their browser cookies, they'll be counted as a new visitor
+- The same person visiting from different devices (like their phone and laptop) will be counted as separate unique visitors
+- People using private/incognito browsing will be counted as new visitors each time
+- Visitors who block cookies will also be counted as new each time they visit
+
+## Data Collection & Privacy Information
+
+For each visit, we collect and store the following information:
+
+### Technical Data
+- A randomly generated visitor ID to recognize return visits
+- Device type (e.g., mobile, desktop, tablet)
+- Operating system (e.g., Windows, iOS, Android)
+- Browser type and version
+- Full user agent string from your browser
+
+### Location Data
+- IP address
+- Country of origin
+
+### Visit Information
+- Which page was visited
+- Where you came from (referrer URL)
+- Whether this counts as a unique visit
+
+Much of this information is considered personal data under privacy regulations like GDPR. If you're using this tracking system, ensure your privacy policy properly discloses all data collection and comply with relevant data protection laws in your region.
+
+Users should be informed about this data collection and, where required by law, given the option to consent or opt out.
