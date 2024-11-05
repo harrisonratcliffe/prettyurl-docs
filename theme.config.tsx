@@ -10,17 +10,6 @@ const config: DocsThemeConfig = {
       </span>
     </>
   ),
-//   logo: (
-  
-//   {/* <div style="display: flex; align-items: center;"> */}
-//   <img width="30px" src="https://prettyurl.net/logo.png" alt="Logo" style="margin-right: 5px;">
-//   {/* <span>Pretty URL</span>
-// </div> */}
-//   ),
-
-  // project: {
-  //   link: 'https://github.com/shuding/nextra-docs-template',
-  // },
   chat: {
     link: 'https://prettyurl.net/link/twitter',
     icon: (
