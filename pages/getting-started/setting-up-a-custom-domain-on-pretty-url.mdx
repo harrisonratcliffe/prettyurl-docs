@@ -1,0 +1,97 @@
+# Setting Up Your Custom Domain with PrettyURL
+
+This guide will help you configure your custom domain or subdomain with our URL shortener service.
+
+## Create the domain on Pretty URL
+
+1. Log into your [Pretty URL Dashboard](https://prettyurl.net/dashboard)
+2. Navigate to the Custom Domains page
+3. Click "Create"
+4. Enter your domain name
+5. Follow the DNS verification steps below
+
+Here's an updated version of the documentation with the DNS configuration section improved:
+
+# Setting Up Your Custom Domain with PrettyURL
+
+This guide will help you configure your custom domain or subdomain with our URL shortener service.
+
+## Quick Setup
+
+1. Log into your PrettyURL dashboard
+2. Navigate to Settings > Custom Domains
+3. Click "Create Domain"
+4. Enter your domain name
+5. Follow the DNS verification steps below
+
+## DNS Configuration
+
+### Option 1: Using a Subdomain (e.g., links.yourdomain.com)
+
+Configure your DNS settings with the following CNAME and TXT records:
+
+**CNAME Record:**
+```
+Type: CNAME
+Host: links (or your preferred subdomain)
+Value: connect.prettyurl.net
+TTL: 3600 (or automatic)
+```
+
+**TXT Record:**
+```
+Type: TXT
+Host: prettyurl-verification
+Value: [Verification Code]
+TTL: 3600 (or automatic)
+```
+
+Replace `[Verification Code]` with the code provided in your PrettyURL dashboard.
+
+### Option 2: Using an Apex Domain (e.g., yourdomain.com)
+
+Configure your DNS settings with the following A and TXT records:
+
+**A Record:**
+```
+Type: A
+Host: @ (or leave empty)
+Value: 167.233.14.201
+TTL: 3600 (or automatic)
+```
+
+**TXT Record:**
+```
+Type: TXT
+Host: prettyurl-verification
+Value: [Verification Code]
+TTL: 3600 (or automatic)
+```
+
+Replace `[Verification Code]` with the code provided in your PrettyURL dashboard.
+
+## Verification Process
+
+1. After adding your DNS records, return to the PrettyURL dashboard
+2. Click "Verify Domain"
+3. The system will check your DNS configuration
+4. Verification usually takes 5-15 minutes, but can take up to 48 hours (very rare) due to DNS propagation
+
+## Troubleshooting
+
+- If verification fails, double-check your DNS records
+- Ensure you've waited at least 15 minutes for DNS propagation
+- Verify that there are no conflicting DNS records
+- Try using a DNS propagation checker tool to verify your changes
+
+## Common Issues
+
+- "Domain Not Verified": Wait for DNS propagation and try again
+- "Invalid DNS Records": Ensure records match exactly as shown above
+- "Domain Already In Use": Contact support if you own this domain
+
+## Next Steps
+
+Once your domain is verified:
+1. Your custom domain is ready to use
+2. All new shortened URLs can use your domain
