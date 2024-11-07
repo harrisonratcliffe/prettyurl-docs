@@ -10,4 +10,4 @@ Then, run `pnpm dev` to start the development server and visit localhost:3000.
 
 ## Production Deployment
 
-Deploying to Cloudflare Pages can be achieved by running `npm run deploy`.
+Deploying to Cloudflare Pages can be achieved by running `pnpm run deploy`.
