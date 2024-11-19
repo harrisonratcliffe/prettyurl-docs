@@ -29,10 +29,6 @@ const config: DocsThemeConfig = {
       These docs are not fully published/finalised yet.
     </a>,
   },
-  gitTimestamp: null,
-  editLink: {
-    component: null
-  },
   feedback: {
     content: null
   },
