@@ -1,4 +1,4 @@
-# Setting Up Your Custom Domain with PrettyURL
+# Setting Up Your Custom Domain with Pretty URL
 
 This guide will help you configure your custom domain or subdomain with our URL shortener service.
 
@@ -12,13 +12,13 @@ This guide will help you configure your custom domain or subdomain with our URL 
 
 Here's an updated version of the documentation with the DNS configuration section improved:
 
-# Setting Up Your Custom Domain with PrettyURL
+# Setting Up Your Custom Domain with Pretty URL
 
 This guide will help you configure your custom domain or subdomain with our URL shortener service.
 
 ## Quick Setup
 
-1. Log into your PrettyURL dashboard
+1. Log into your Pretty URL dashboard
 2. Navigate to Settings > Custom Domains
 3. Click "Create Domain"
 4. Enter your domain name
@@ -41,12 +41,12 @@ TTL: 3600 (or automatic)
 **TXT Record:**
 ```
 Type: TXT
-Host: prettyurl-verification
+Host: Pretty URL-verification
 Value: [Verification Code]
 TTL: 3600 (or automatic)
 ```
 
-Replace `[Verification Code]` with the code provided in your PrettyURL dashboard.
+Replace `[Verification Code]` with the code provided in your Pretty URL dashboard.
 
 ### Option 2: Using an Apex Domain (e.g., yourdomain.com)
 
@@ -63,16 +63,16 @@ TTL: 3600 (or automatic)
 **TXT Record:**
 ```
 Type: TXT
-Host: prettyurl-verification
+Host: Pretty URL-verification
 Value: [Verification Code]
 TTL: 3600 (or automatic)
 ```
 
-Replace `[Verification Code]` with the code provided in your PrettyURL dashboard.
+Replace `[Verification Code]` with the code provided in your Pretty URL dashboard.
 
 ## Verification Process
 
-1. After adding your DNS records, return to the PrettyURL dashboard
+1. After adding your DNS records, return to the Pretty URL dashboard
 2. Click "Verify Domain"
 3. The system will check your DNS configuration
 4. Verification usually takes 5-15 minutes, but can take up to 48 hours (very rare) due to DNS propagation
