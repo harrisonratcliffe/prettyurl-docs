@@ -12,31 +12,41 @@ This guide will help you configure your custom domain or subdomain with our URL 
 
 ## DNS Configuration
 
-### Option 1: Using a Subdomain (e.g., links.yourdomain.com)
+### Option 1: Using a Subdomain &#40;e.g., links.yourdomain.com&#41;    
 
-Configure your DNS settings with the following CNAME and TXT records:
-
-**CNAME Record:**
-```
-Type: CNAME
-Host: links (or your preferred subdomain)
-Value: connect.prettyurl.net
-TTL: 3600 (or automatic)
-```
+Configure your DNS settings with the following TXT and A records:
 
 **TXT Record:**
 ```
 Type: TXT
-Host: Pretty URL-verification
-Value: [Verification Code]
+Host: links (or your preferred subdomain)
+Value: pretty-url-verification=[Verification Code]
 TTL: 3600 (or automatic)
 ```
 
 Replace `[Verification Code]` with the code provided in your Pretty URL dashboard.
 
-### Option 2: Using an Apex Domain (e.g., yourdomain.com)
+**A Record:**
+```
+Type: A
+Host: links (or your preferred subdomain)
+Value: 167.233.14.201
+TTL: 3600 (or automatic)
+```
 
-Configure your DNS settings with the following A and TXT records:
+### Option 2: Using an Apex Domain &#40;e.g., yourdomain.com&#41;
+
+Configure your DNS settings with the following TXT and A records:
+
+**TXT Record:**
+```
+Type: TXT
+Host: @ (or leave empty)
+Value: pretty-url-verification=[Verification Code]
+TTL: 3600 (or automatic)
+```
+
+Replace `[Verification Code]` with the code provided in your Pretty URL dashboard.
 
 **A Record:**
 ```
@@ -45,16 +55,6 @@ Host: @ (or leave empty)
 Value: 167.233.14.201
 TTL: 3600 (or automatic)
 ```
-
-**TXT Record:**
-```
-Type: TXT
-Host: Pretty URL-verification
-Value: [Verification Code]
-TTL: 3600 (or automatic)
-```
-
-Replace `[Verification Code]` with the code provided in your Pretty URL dashboard.
 
 ## Verification Process
 
