@@ -26,7 +26,7 @@ const config: DocsThemeConfig = {
     dismissible: false,
     key: 'banner-1',
     text: <a href="https://tracklancer.io" target="_blank">
-      These docs are not fully published/finalised yet.
+      These docs are not fully published/finalised yet as Pretty URL is a work in progress!
     </a>,
   },
   feedback: {
