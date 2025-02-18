@@ -1,6 +1,15 @@
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import {useRouter} from "next/router";
 
 const config: DocsThemeConfig = {
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – Pretty URL'
+      }
+    }
+  },
   logo: (
     <>
   <img width="30px" src="https://prettyurl.net/logo.webp" alt="Logo" />
