@@ -1,0 +1,21 @@
+# Authentication
+
+To access the API, you must provide an API key, which can be created through the [Pretty URL Dashboard](https://prettyurl.net/dashboard/account/api-keys).
+
+### Authentication Process
+
+When making API requests, add the API key in the Authorization header as a bearer token. For example:
+
+```
+Authorization: Bearer {api_key_here}
+```
+
+### IP Restrictions
+
+Currently, when API keys are created they can be used from any IP address. We are working to make it possible to restrict API keys to certain IP's.
+
+### Secrets Management
+
+We do not keep a recoverable record of your API key secret. It will only be visible in the dashboard for a limited time following its creation.
+
+If you lose the secret, you can delete the AIP key and create a new one.

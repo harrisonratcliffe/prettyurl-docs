@@ -1,0 +1,14 @@
+# Handling Errors
+
+When using our API you will most likely receive errors at some point. Errors will be returned in a JSON response format
+such as the below example:
+
+```json
+{
+    "status": "error",
+    "message": "The route api/v1/endpoint-doesnt-exist could not be found.",
+    "details": {
+        // any additional error details
+    }
+}
+```
