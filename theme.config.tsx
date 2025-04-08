@@ -30,6 +30,9 @@ const config: DocsThemeConfig = {
       </svg>
     )
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 1
+  },
   docsRepositoryBase: 'https://github.com/harrisonratcliffe/prettyurl-docs',
   banner: {
     dismissible: false,
