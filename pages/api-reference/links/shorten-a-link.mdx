@@ -5,19 +5,24 @@ import HttpMethodBadge from "/components/HttpMethodBadge";
 <HttpMethodBadge method="POST" /> Shortens a long link to a shortened one.
 
 ### Request
-#### Bondy
-| Name   | Type   | Required | Notes                                                                    |
-|--------|--------|----------|--------------------------------------------------------------------------|
-| link   | string | true     | The long link you want to shorten                                        |
-| domain | string | false    | The domain name you want to use. No the ID. If empty, zd.lc will be used |
-| title  | string | false    | The title of your link                                                   |
+#### Body
+| Name   | Type   | Required | Notes                                                                     |
+|--------|--------|----------|---------------------------------------------------------------------------|
+| link   | string | true     | The long link you want to shorten                                         |
+| domain | string | false    | The domain name you want to use. Not the ID. If empty, zd.lc will be used |
+| title  | string | false    | The title of your link                                                    |
 
 #### Example
 ```shell
-curl \
--H 'Authorization: Bearer {API_KEY}' \
--X POST \
-https://prettyurl.net/api/v1/links
+curl -L -X PATCH 'https://prettyurl.net/api/v1/links' \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json' \
+-H 'Authorization: Bearer <API_KEY>' \
+-d '{
+  "link": "string",
+  "domain": "string",
+  "title": "string",
+}'
 ```
 
 ### Response
