@@ -12,10 +12,9 @@ import HttpMethodBadge from "/components/HttpMethodBadge";
 
 #### Example
 ```shell
-curl \
--H 'Authorization: Bearer {API_KEY}' \
--X GET \
-https://prettyurl.net/api/v1/links
+curl -L -X GET 'https://prettyurl.net/api/v1/links' \
+-H 'Accept: application/json' \
+-H 'Authorization: Bearer <API_KEY>'
 ```
 
 ### Response

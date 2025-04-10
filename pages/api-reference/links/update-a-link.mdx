@@ -16,10 +16,17 @@ import HttpMethodBadge from "/components/HttpMethodBadge";
 
 #### Example
 ```shell
-curl \
--H 'Authorization: Bearer {API_KEY}' \
--X PATCH \
-https://prettyurl.net/api/v1/links/9e968c2c-62d3-4d20-8899-6601721f25c6
+curl -L -X PATCH 'https://prettyurl.net/api/v1/links/9e968c2c-62d3-4d20-8899-6601721f25c6' \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json' \
+-H 'Authorization: Bearer <API_KEY>' \
+-d '{
+  "title": "string",
+  "group_id": "string",
+  "back_half": "string",
+  "original_url": "string",
+  "group_id": "string",
+}'
 ```
 
 ### Response
