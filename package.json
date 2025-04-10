@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/harrisonratcliffe/prettyurl-docs#readme",
   "dependencies": {
-    "next": "^13.0.6",
-    "nextra": "latest",
-    "nextra-theme-docs": "latest",
+    "@cloudflare/next-on-pages": "^1.13.12",
+    "@opennextjs/cloudflare": "^0.6.6",
+    "next": "^15.3.0",
+    "nextra": "^2.13.4",
+    "nextra-theme-docs": "^2.13.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
