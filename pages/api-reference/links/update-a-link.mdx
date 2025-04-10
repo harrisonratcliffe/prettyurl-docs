@@ -1,0 +1,64 @@
+import HttpMethodBadge from "/components/HttpMethodBadge";
+
+# Update A Link
+
+<HttpMethodBadge method="PATCH" /> Update one of your shortened links.
+
+### Request
+#### Body
+| Name         | Type   | Notes                            |
+|--------------|--------|----------------------------------|
+| title        | string | The title of your link           |
+| group_id     | string | The link group of your link      |
+| back_half    | string | The back half of your link (URI) |
+| original_url | string | The destination URL              |
+| group_id     | string | The link group of your link      |
+
+#### Example
+```shell
+curl \
+-H 'Authorization: Bearer {API_KEY}' \
+-X PATCH \
+https://prettyurl.net/api/v1/links/9e968c2c-62d3-4d20-8899-6601721f25c6
+```
+
+### Response
+#### Schema
+`link`
+
+| Key           | Type     |
+|---------------|----------|
+| id            | string   |
+| title         | string   |
+| domain        | string   |
+| group         | object   |
+| back_half     | string   |
+| short_link    | string   |
+| original_link | string   |
+| updated_at    | datetime |
+| created_at    | datetime |
+
+#### Example
+```json
+{
+    "status": "success",
+    "message": "API request processed successfully.",
+    "data": {
+        "link": {
+            "id": string,
+            "title": string,
+            "domain": string,
+            "group": {
+                "id": string,
+                "name": string,
+                "created_at": datetime
+            },
+            "back_half": string,
+            "short_link": string,
+            "original_link": string,
+            "updated_at": datetime,
+            "created_at": datetime
+        }
+    }
+}
+```

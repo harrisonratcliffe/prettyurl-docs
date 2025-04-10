@@ -1,0 +1,7 @@
+{
+    "get-links": "GET - List Links",
+    "get-link": "GET - Get Link",
+    "shorten-a-link": "POST - Shorten A Link",
+    "update-a-link": "PATCH - Update A Link",
+    "delete-link": "DELETE - Delete Link"
+}
