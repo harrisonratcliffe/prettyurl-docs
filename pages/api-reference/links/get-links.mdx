@@ -1,0 +1,69 @@
+import PaginationQueryParameters from '/components/PaginationQueryParameters.mdx'
+import PaginationResponseSchema from '/components/PaginationResponseSchema.mdx'
+import HttpMethodBadge from "/components/HttpMethodBadge";
+
+# List Links
+
+<HttpMethodBadge method="GET" /> Returns a list of all your links.
+
+### Request
+#### Query Parameters
+<PaginationQueryParameters />
+
+#### Example
+```shell
+curl \
+-H 'Authorization: Bearer {API_KEY}' \
+-X GET \
+https://prettyurl.net/api/v1/links
+```
+
+### Response
+#### Schema
+<PaginationResponseSchema />
+
+`links` *object*
+| Key          | Type    |
+|--------------|---------|
+| id | string |
+| title  | string |
+| domain        | string |
+| group     | object |
+| back_half     | string |
+| short_link     | string |
+| original_link     | string |
+| updated_at     | datetime |
+| created_at     | datetime |
+
+#### Example
+```json
+{
+    "status": "success",
+    "message": "API request processed successfully.",
+    "data": {
+        "links": [
+            {
+                "id": string,
+                "title": string,
+                "domain": string,
+                "group": {
+                    "id": string,
+                    "name": string,
+                    "created_at": datetime
+                },
+                "back_half": string,
+                "short_link": string,
+                "original_link": string,
+                "updated_at": datetime,
+                "created_at": datetime
+            }
+        ],
+        "pagination": {
+            "current_page": number,
+            "total_pages": number,
+            "total": number,
+            "per_page": number
+        }
+    }
+}
+```

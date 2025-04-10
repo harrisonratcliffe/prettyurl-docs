@@ -1,0 +1,41 @@
+# Retrieving Data
+
+When you make a request to our API, responses are returned in a standard format encapsulating the result of your query. The data is transmitted using the `application/json` content type, ensuring compatibility with a wide range of programming languages and systems.
+
+## Response Format
+
+The API response will generally adhere to the following structure:
+
+```json
+{
+    "status": "success",
+    "message": "API request processed successfully.",
+    "data": {
+        "link": {
+            "id": "string",
+            "title": "string",
+            "domain": "string",
+            "group": {
+                "id": "string",
+                "name": "string",
+                "created_at": "datetime"
+            },
+            "back_half": "string",
+            "short_link": "string",
+            "original_link": "string",
+            "updated_at": "datetime",
+            "created_at": "datetime"
+        }
+    }
+}
+```
+
+### Breakdown of the Response
+
+- **status**: A string indicating the success or failure of the API request. This will either be `"success"`: which
+indicates that the request was processed successfully OR `"error"` which indicates that there was an error in processing the request.
+- **message**: A string providing additional information about the result of the API request. This can include success messages or error descriptions.
+- **data**: This is the main payload of the response, containing the requested information.
+
+If there is an error, you will see a **details** object instead of **data** with any relevant errors such as in the event of a
+validation error. You can read more on the [Handling Errors](/api-reference/handling-errors) page.

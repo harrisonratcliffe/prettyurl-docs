@@ -1,0 +1,60 @@
+import HttpMethodBadge from "/components/HttpMethodBadge";
+
+# Delete Link
+
+<HttpMethodBadge method="DELETE" /> Deletes a link.
+
+### Request
+#### Query Parameters
+| Name    | Type   | Required | Notes                        |
+|---------|--------|----------|------------------------------|
+| link_id | string | true     | The ID of the link to delete |
+
+#### Example
+```shell
+curl \
+-H 'Authorization: Bearer {API_KEY}' \
+-X DELETE \
+https://prettyurl.net/api/v1/links/9e968c2c-62d3-4d20-8899-6601721f25c6
+```
+
+### Response
+#### Schema
+`link`
+
+| Key           | Type     |
+|---------------|----------|
+| id            | string   |
+| title         | string   |
+| domain        | string   |
+| group         | object   |
+| back_half     | string   |
+| short_link    | string   |
+| original_link | string   |
+| updated_at    | datetime |
+| created_at    | datetime |
+
+#### Example
+```json
+{
+    "status": "success",
+    "message": "API request processed successfully.",
+    "data": {
+        "link": {
+            "id": string,
+            "title": string,
+            "domain": string,
+            "group": {
+                "id": string,
+                "name": string,
+                "created_at": datetime
+            },
+            "back_half": string,
+            "short_link": string,
+            "original_link": string,
+            "updated_at": datetime,
+            "created_at": datetime
+        }
+    }
+}
+```
