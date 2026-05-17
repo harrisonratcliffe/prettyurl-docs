@@ -21,7 +21,7 @@
   "homepage": "https://github.com/harrisonratcliffe/prettyurl-docs#readme",
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.12",
-    "@opennextjs/cloudflare": "^0.6.6",
+    "@opennextjs/cloudflare": "^1.17.1",
     "next": "^15.5.18",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
